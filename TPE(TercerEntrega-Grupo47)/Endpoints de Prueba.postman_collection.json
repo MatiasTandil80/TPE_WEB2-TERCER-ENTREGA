@@ -1,0 +1,482 @@
+{
+	"info": {
+		"_postman_id": "a19de918-bf06-4d1f-ab72-1defb1c7db28",
+		"name": "Endpoints de Prueba",
+		"description": "Esta coleccion abarca todos los servicios de la Api de la tercer entrega",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30818397"
+	},
+	"item": [
+		{
+			"name": "Modelos de Motos",
+			"item": [
+				{
+					"name": "Get Modelos General",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"id_marca\": 135,\r\n        \"detalle\": \"Esta fabrica fue hecha por Yamamoto\",\r\n        \"nombre_marca\": \"yamaha\"\r\n    },"
+						},
+						"url": {
+							"raw": "{{base_url}}/TPE(TercerEntrega-Grupo47)/api/modelos",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"TPE(TercerEntrega-Grupo47)",
+								"api",
+								"modelos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Modelos con ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/TPE(TercerEntrega-Grupo47)/api/modelos?id=43",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"TPE(TercerEntrega-Grupo47)",
+								"api",
+								"modelos"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "43"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Modelos Con Filtro",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/TPE(TercerEntrega-Grupo47)/api/modelos?filterBy=tipo=deportiva",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"TPE(TercerEntrega-Grupo47)",
+								"api",
+								"modelos"
+							],
+							"query": [
+								{
+									"key": "filterBy",
+									"value": "tipo=deportiva"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Modelos con Orden",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/TPE(TercerEntrega-Grupo47)/api/modelos?orderBy=peso_kg=ASC",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"TPE(TercerEntrega-Grupo47)",
+								"api",
+								"modelos"
+							],
+							"query": [
+								{
+									"key": "orderBy",
+									"value": "peso_kg=ASC"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Modelos Combinado",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/TPE(TercerEntrega-Grupo47)/api/modelos?filterBy=tipo=deportiva&orderBy=peso_kg=DESC",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"TPE(TercerEntrega-Grupo47)",
+								"api",
+								"modelos"
+							],
+							"query": [
+								{
+									"key": "filterBy",
+									"value": "tipo=deportiva"
+								},
+								{
+									"key": "orderBy",
+									"value": "peso_kg=DESC"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert Modelo Moto",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"id_marca\": 135,\r\n        \"nombre\": \"Moto Para Postman\",\r\n        \"cilindrada_cm3\": 497,\r\n        \"tipo\": \"descenso\",\r\n        \"potencia_hp\": 353,\r\n        \"peso_kg\": 208\r\n    }"
+						},
+						"url": {
+							"raw": "{{base_url}}/TPE(TercerEntrega-Grupo47)/api/modelos",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"TPE(TercerEntrega-Grupo47)",
+								"api",
+								"modelos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Modelo Moto",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"cilindrada_cm3\": 1000       \r\n    }"
+						},
+						"url": {
+							"raw": "{{base_url}}/TPE(TercerEntrega-Grupo47)/api/modelos/58",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"TPE(TercerEntrega-Grupo47)",
+								"api",
+								"modelos",
+								"58"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Modelo Moto",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/TPE(TercerEntrega-Grupo47)/api/modelos/590",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"TPE(TercerEntrega-Grupo47)",
+								"api",
+								"modelos",
+								"590"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Marcas de Motos",
+			"item": [
+				{
+					"name": "Get Marcas",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/TPE(TercerEntrega-Grupo47)/api/marcas",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"TPE(TercerEntrega-Grupo47)",
+								"api",
+								"marcas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Marca con ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/TPE(TercerEntrega-Grupo47)/api/marcas?id=140",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"TPE(TercerEntrega-Grupo47)",
+								"api",
+								"marcas"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "140"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert Marca",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"nombre\": \"Zanellon\",\r\n        \"origen\": \"Argentina\",\r\n        \"año_fundacion\": 1950,\r\n        \"cant_empleados\": 22,\r\n        \"produccion_anual\": 140000,\r\n        \"facturacion_M_USD\": 6\r\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/TPE(TercerEntrega-Grupo47)/api/marcas",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"TPE(TercerEntrega-Grupo47)",
+								"api",
+								"marcas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Marca",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n}\r\n"
+						},
+						"url": {
+							"raw": "{{base_url}}/TPE(TercerEntrega-Grupo47)/api/marcas/140",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"TPE(TercerEntrega-Grupo47)",
+								"api",
+								"marcas",
+								"140"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Marca",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/TPE(TercerEntrega-Grupo47)/api/marcas/142",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"TPE(TercerEntrega-Grupo47)",
+								"api",
+								"marcas",
+								"142"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Reseñas de Marcas",
+			"item": [
+				{
+					"name": "Get Reseñas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/TPE(TercerEntrega-Grupo47)/api/reseñas",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"TPE(TercerEntrega-Grupo47)",
+								"api",
+								"reseñas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get con Nombre Marca",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/TPE(TercerEntrega-Grupo47)/api/reseñas?id=135",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"TPE(TercerEntrega-Grupo47)",
+								"api",
+								"reseñas"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "135"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert Reseña",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"detalle\": \"Esta fábrica comenzó en Argentina\",\r\n        \"id_marca\":\"140\"\r\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/TPE(TercerEntrega-Grupo47)/api/reseñas",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"TPE(TercerEntrega-Grupo47)",
+								"api",
+								"reseñas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Reseña",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"detalle\": \"Es una marca japonesa\"\r\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/TPE(TercerEntrega-Grupo47)/api/reseñas/140",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"TPE(TercerEntrega-Grupo47)",
+								"api",
+								"reseñas",
+								"140"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Reseña con ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/TPE(TercerEntrega-Grupo47)/api/reseñas/140",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"TPE(TercerEntrega-Grupo47)",
+								"api",
+								"reseñas",
+								"140"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost/Matias"
+		}
+	]
+}
