@@ -1,3 +1,5 @@
+Se adjunta el export de las colecciones de los endpoints del Postman.
+
 En nuestra entrega declaramos una variable en POSTMAN llamada base_url, de manera que el principio de cada ruta en este readme va a ser mostrada con el inicio de la misma, de la forma {{base_url}}/TPE(TercerEntrega-Grupo47)/api/modelos.
 
 
